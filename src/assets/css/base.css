@@ -1,0 +1,18 @@
+body, html{
+  margin: 0px;
+  height: 0px;
+  font-family: '阿里巴巴普惠体';
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --color-text:#f3f3f3;
+  --color-active-text: #f3f3f3;
+  --color-background-blue: #43bfff;
+  --color-background-blue-unselected: #93daff;
+  --color-background-yellow: #E0C616;
+  --color-background: #f5f6fa;
+  --center-box: 1200px;
+}
