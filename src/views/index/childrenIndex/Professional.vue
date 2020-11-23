@@ -4,10 +4,26 @@
       <h2 class="professional-title">专业技能</h2>
       <div class="professional-content">
         <div class="pro-content-top">
-          <img v-for="(item, index) in proListTop" :key="index" :src="item.imgUrl" alt="">
+          <div v-for="(item, index) in proListTop" :key="index">
+            <div class="pro-img-hover">
+              <img :src="item.imgUrl" :alt="item.imgUrl" >
+              <div class="pro-hover-text">
+                <p v-for="(subItem, subIndex) in item.texts" :key="subIndex">{{subItem}}</p>
+              </div>
+            </div>
+            <h3 class="pro-img-title">{{item.title}}</h3>
+          </div>
         </div>
         <div class="pro-content-bottom">
-          <img v-for="(item, index) in proListBottom" :key="index" :src="item.imgUrl" alt="">
+          <div v-for="(item, index) in proListBottom" :key="index">
+            <div class="pro-img-hover">
+              <img :src="item.imgUrl" :alt="item.imgUrl" >
+              <div class="pro-hover-text">
+                <p v-for="(subItem, subIndex) in item.texts" :key="subIndex">{{subItem}}</p>
+              </div>
+            </div>
+            <h3 class="pro-img-title">{{item.title}}</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -23,30 +39,54 @@ export default {
         {
           title: '前端三剑客',
           imgUrl: require('@a/img/zyjn1.jpg'),
+          texts: [
+            'HTML',
+            'CSS',
+            'JavaScript'
+          ]
         },
         {
           title: '前端框架',
-          imgUrl: require('@a/img/zyjn2.jpg')
+          imgUrl: require('@a/img/zyjn2.jpg'),
+          texts: [
+            'HTML',
+            'CSS',
+            'JavaScript'
+          ]
           
         },
         {
           title: '对接后台',
-          imgUrl: require('@a/img/zyjn3.jpg')
+          imgUrl: require('@a/img/zyjn3.jpg'),
+          texts: [
+            'HTML',
+          ]
         },       
       ],
       proListBottom: [
         {
           title: '前端三剑客',
           imgUrl: require('@a/img/zyjn4.jpg'),
+          texts: [
+            'CSS',
+            'JavaScript'
+          ]
         },
         {
           title: '前端框架',
-          imgUrl: require('@a/img/zyjn5.jpg')
+          imgUrl: require('@a/img/zyjn5.jpg'),
+          texts: [
+            'HTML',
+            'JavaScript'
+          ]
           
         },
         {
           title: '对接后台',
-          imgUrl: require('@a/img/zyjn6.jpg')
+          imgUrl: require('@a/img/zyjn6.jpg'),
+          texts: [
+            'HTML',
+          ]
         },       
       ]
     }
@@ -65,7 +105,7 @@ export default {
     overflow: hidden;
   }
   .professional-title {
-    margin-top: 20px;
+    margin-top: 100px;
     text-align: center;
     font-size: 48px;
     color: #fff;
@@ -87,21 +127,61 @@ export default {
     flex-direction: column;
   }
   .pro-content-top {
-    margin-top: 30px;
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
   }
   .pro-content-top img {
-    border-radius: 20px;
     width: 370px;
+    float: left;
   }
   .pro-content-bottom {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 60px;
+    text-align: center;
   }
   .pro-content-bottom img{
-    border-radius: 15px;
     width: 370px;
+    float: left;
+  }
+  .pro-img-title {
+    font-size: 26px;
+    color: #fff;
+    letter-spacing: 6px;
+    margin-top: 10px;
+  }
+
+  /* hover */
+  .pro-img-hover {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .pro-hover-text p {
+    padding: 20px 10px 0px 10px;
+    /* border-bottom: 2px solid #fff; */
+    display: block;
+    color: #fff;
+  }
+  .pro-hover-text {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.7);
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    cursor: pointer;
+    opacity: 0;
+    transition: .2s;
+    box-shadow: 20px 0px 5px rgba(31, 31, 31, 1);
+    font-size: 24px;
+  }
+  .pro-hover-text:hover{
+    top: 0px;
+    opacity: 1;
   }
 </style>

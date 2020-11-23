@@ -1,11 +1,12 @@
 <template>
   <div class="design">
     <div class="design-center">
+      <h2 class="design-title">作品展示</h2>
       <!-- autoplay 自动播放   loop 循环   height 设置高度   autoplay-speed 延迟时间 -->
       <Carousel class="design-carousel" v-model="value1" loop :height="height" :autoplay-speed="5000">
         <CarouselItem v-for="(item, index) in showImgs" :key="index">
           <div class="design-img-center">
-            <div class="design-title">{{item.title}}</div>
+            <div class="design-img-title">{{item.title}}</div>
             <img :src="item.imgUrl" alt="i" class="design-img">
           </div>
         </CarouselItem>
@@ -29,19 +30,19 @@ export default {
       value1: 0,
       showImgs: [
         {
-          imgUrl: require('@a/img/Music.png'),
+          // imgUrl: require('@a/img/Music.png'),
           title: '创意海报1',
         },
         {
-          imgUrl: require('@a/img/Music.png'),
+          // imgUrl: require('@a/img/Music.png'),
           title: '创意海报2',
         },
         {
-          imgUrl: require('@a/img/Music.png'),
+          // imgUrl: require('@a/img/Music.png'),
           title: '创意海报3',
         },
         {
-          imgUrl: require('@a/img/Music.png'),
+          // imgUrl: require('@a/img/Music.png'),
           title: '创意海报4',
         },
       ]
@@ -55,13 +56,34 @@ export default {
   height: 980px;
   width: 100%;
   position: relative;
-  background-color: #f1f2f6;
+  background-color: var(--color-background);
+  overflow: hidden;
+}
+.design-title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 48px;
+  position: relative;
+}
+.design-title::after {
+  content: '';
+  display: inline-block;
+  height: 5px;
+  width: 200px;
+  background-color: var(--color-background-blue);
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .design-center {
+  overflow: hidden;
   width: 1200px;
-  height: 790px;
-  margin: 0 auto;
+  height: 940px;
+  margin: 20px auto;
   cursor: pointer;
+  background-color: #fff;
+  border-radius: 20px;
 }
 .ivu-icon-ios-arrow-back:before {
   content: "\F33A";
@@ -70,7 +92,6 @@ export default {
 .ivu-icon-ios-arrow-forward:before {
   content: "\F344";
   font-size: 48px;
-
 }
 .ivu-carousel-arrow {
   margin:0px;
@@ -114,7 +135,7 @@ export default {
   width: 430px;
   height: 580px;
 }
-.design-title {
+.design-img-title {
   font-size: 28px;
 }
 .design-img-center {
