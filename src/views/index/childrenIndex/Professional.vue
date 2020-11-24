@@ -176,11 +176,11 @@ export default {
     left: 0px;
     cursor: pointer;
     opacity: 0;
-    transition: .2s;
+    transition: .3s;
     box-shadow: 20px 0px 5px rgba(31, 31, 31, 1);
     font-size: 24px;
   }
-  .pro-hover-text:hover{
+  .pro-img-hover:hover .pro-hover-text{
     top: 0px;
     opacity: 1;
   }
