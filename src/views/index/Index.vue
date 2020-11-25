@@ -1,11 +1,12 @@
 <template>
   <div class="header">
     <Banner></Banner>
-    <Me></Me>
+    <Me @getIconList="getIconList"></Me>
     <Professional></Professional>
     <Design></Design>
     <Contact></Contact>
-    <Footer></Footer>
+    <!-- footer组件传入输入 -->
+    <Footer :bottomIcon="iconList"></Footer>
   </div>
 </template>
 
@@ -19,6 +20,12 @@ import Professional from '@views/index/childrenIndex/Professional.vue';
 
 export default {
   name: 'Header',
+  data() {
+    return {
+      //ICON数据
+      iconList: null  
+    }
+  },
   components: {
     Me,
     Banner,
@@ -26,6 +33,13 @@ export default {
     Footer,
     Contact,
     Professional,
+  },
+  methods: {
+    // 接收来自Me的ICON数据
+    getIconList(data) {
+      console.log(data);
+      this.iconList = data;
+    }
   }
 }
 </script>

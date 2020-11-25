@@ -98,6 +98,9 @@ export default {
           this.iconUrl = 'error!'
       }
     }
+  },
+  mounted () {
+    this.$emit('getIconList', this.iconList);
   }
 }
 </script>

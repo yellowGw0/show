@@ -3,7 +3,7 @@
     <div class="nav-center">
       <div class="nav-left">
         <span><i class="nav-icon"></i>YG</span>
-        <div>作品 <i class="nav-arrows"></i></div>
+        <div @click="designClick">作品 <i class="nav-arrows"></i></div>
         <div>留言 <i class="nav-arrows"></i></div>
       </div>
       <div class="nav-right">
@@ -21,6 +21,11 @@ export default {
     return {
       
     } 
+  },
+  methods: {
+    designClick() {
+      this.$router.push('/index/design');
+    }
   }
 }
 </script>                             
