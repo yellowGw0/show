@@ -3,9 +3,13 @@ body, html{
   height: 0px;
   font-family: '阿里巴巴普惠体';
 }
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, ul {
   margin: 0;
   padding: 0;
+}
+input {
+  outline: none;
+  border: none;
 }
 :root {
   --color-text:#f3f3f3;
