@@ -14,12 +14,10 @@ const routes = [
   {
     path: '/index',
     component: Index,
-    children: [
-      {
-        path: 'design', 
-        component: Design
-      }
-    ]
+  },
+  {
+    path: '/design', 
+    component: Design
   }
 ]
 

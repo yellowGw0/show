@@ -1,5 +1,7 @@
 <template>
   <div class="header">
+    <back-top></back-top>
+    <nav-bar class="index-nav"></nav-bar>
     <Banner></Banner>
     <Me @getIconList="getIconList"></Me>
     <Professional></Professional>
@@ -11,6 +13,9 @@
 </template>
 
 <script>
+import NavBar from '@/components/content/NavBar.vue';
+import BackTop from '@/components/content/BackTop.vue';
+
 import Me from '@views/index/childrenIndex/Me.vue';
 import Banner from '@views/index/childrenIndex/Banner.vue';
 import Design from '@views/index/childrenIndex/Design.vue';
@@ -31,7 +36,9 @@ export default {
     Banner,
     Design,
     Footer,
+    NavBar,
     Contact,
+    BackTop,
     Professional,
   },
   methods: {
@@ -45,5 +52,8 @@ export default {
 </script>
 
 <style scoped>
-  
+  .index-nav {
+    position: absolute;
+    z-index: 1;
+  }
 </style>

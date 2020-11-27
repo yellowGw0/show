@@ -20,11 +20,11 @@ export default {
   data () {
     return {
       
-    } 
+    }
   },
   methods: {
     designClick() {
-      this.$router.push('/index/design');
+      this.$router.push('/design');
     }
   }
 }
