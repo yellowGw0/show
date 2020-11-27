@@ -93,7 +93,7 @@ export default {
     padding-bottom: 10px;
   }
   .contact-input-phone {
-    color: rgb(255, 154, 23);
+    color: #ff9c1a;
     width: 700px;
     height: 60px;
     background-color: #fff;
