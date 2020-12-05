@@ -1,5 +1,6 @@
 <template>
   <div class="message">
+    <nav-bar class="message-nav"></nav-bar>
     <h2 class="message-title">留言</h2>
     <div class="message-content">
       <div class="me-content-left">
@@ -7,11 +8,11 @@
       </div>
       <div class="me-content-right">
         <div>
-          <i></i>
+          <i class="message-name"></i>
           <input type="text" placeholder="请输入姓名">
         </div>
         <div>
-          <i></i>
+          <i class="message-me"></i>
           <input type="text" placeholder="请输入留言">
         </div>
         <input type="submit" value="发送">
@@ -21,36 +22,46 @@
 </template>
 
 <script>
+import NavBar from '@/components/content/NavBar.vue';
+
 export default {
   name: 'Message',
   data () {
     return {
       
     }
+  },
+  components: {
+    NavBar,
+    
   }
 }
 </script>
 
 <style spcoed>
-  body {
+  .message {
     background-image: url('./../../assets/img/back.png');
     background-color: var(--color-background-blue);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 100%;
-  }
-  /* .message {
-    background-image: url('./../../assets/img/back.png');
-    background-color: var(--color-background-blue);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     height: 1080px;
-    width: 100%;
-    overflow: hidden;
-  } */
+  }
+  .message-name {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    vertical-align: middle;
+  }
+  .message-me {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    vertical-align: middle;
+  }
   .message-title {
     font-size: 68px;
     color: #fff;
@@ -73,12 +84,11 @@ export default {
     text-align: center;
   }
   .me-content-right {
+    padding: 10px;
     width: 700px;
-    /* background-color: #fff; */
     height: 700px;
     border-radius: 20px;
     overflow: hidden;
-    /* box-shadow: 0px 0px 30px #2161848f; */
   }
   
 </style>

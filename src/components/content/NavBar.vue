@@ -2,7 +2,7 @@
   <div class="nav-bar">
     <div class="nav-center">
       <div class="nav-left">
-        <span><i class="nav-icon"></i>YG</span>
+        <span @click="linkClick('/')" class="nav-home"><i class="nav-icon"></i>YG</span>
         <div @click="linkClick('/design')">作品 <i class="nav-arrows"></i></div>
         <div @click="linkClick('/message')">留言 <i class="nav-arrows"></i></div>
       </div>
@@ -36,6 +36,9 @@ export default {
     height: 70px;
     width: 100%;
     justify-content: center;
+  }
+  .nav-home {
+    cursor: pointer;
   }
   .nav-center {
     width: 1200px;
