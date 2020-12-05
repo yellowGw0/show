@@ -3,8 +3,8 @@
     <div class="nav-center">
       <div class="nav-left">
         <span><i class="nav-icon"></i>YG</span>
-        <div @click="designClick">作品 <i class="nav-arrows"></i></div>
-        <div>留言 <i class="nav-arrows"></i></div>
+        <div @click="linkClick('/design')">作品 <i class="nav-arrows"></i></div>
+        <div @click="linkClick('/message')">留言 <i class="nav-arrows"></i></div>
       </div>
       <div class="nav-right">
         <div>关于 <i class="nav-arrows"></i></div>
@@ -23,9 +23,9 @@ export default {
     }
   },
   methods: {
-    designClick() {
-      this.$router.push('/design');
-    }
+    linkClick(link) {
+      this.$router.push(link);
+    },
   }
 }
 </script>                             

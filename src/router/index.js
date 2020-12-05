@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 const Index = () => import('@/views/index/Index.vue');
 const Design = () => import('@/views/design/Design.vue');
+const Message = () => import('@/views/message/Message.vue')
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,10 @@ const routes = [
   {
     path: '/design', 
     component: Design
+  },
+  {
+    path: '/message',
+    component: Message
   }
 ]
 
