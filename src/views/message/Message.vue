@@ -72,7 +72,7 @@ export default {
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 1080px;
+    height: 1000px;
   }
   .message-name-icon {
     display: inline-block;
@@ -99,9 +99,8 @@ export default {
     left: -70px;
   }
   .message-title {
-    font-size: 68px;
-    color: #000;
-    margin: 10px 0px;
+    font-size: 48px;
+    color: #fff;
   }
   .message-content {
     width: 1500px;
@@ -119,7 +118,7 @@ export default {
   }
   .message-me {
     width: 100%;
-    height: 450px;
+    height: 500px;
     outline: none;
     border: none;
     padding: 10px;
@@ -138,7 +137,6 @@ export default {
     text-align: center;
   }
   .me-content-right {
-    padding: 10px;
     width: 700px;
     height: 700px;
     border-radius: 20px;

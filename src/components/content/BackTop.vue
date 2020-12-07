@@ -12,11 +12,16 @@ export default {
   data () {
     return {
       isShow: false,
-      height: 1000
+      //判断显示距离
+      height: 1000,
+      //滚动定时器
+      timer: null,
+      value: 60
     }
   },
   mounted () {
     document.body.onscroll = () => {
+      //获取滚动距离
       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
       this.isShow = scrollTop >= this.height ? true : false 
@@ -24,7 +29,27 @@ export default {
   },
   methods: {
     backTop() {
-      document.documentElement.scrollTop = 0;
+      //隐藏滚动条
+      document.body.style.overflow = 'hidden';
+
+      //清楚上一次定时器
+      if (this.timer != null) {
+        clearInterval(this.time);
+      }
+      
+      this.timer = setInterval(() => {
+        //获取滚动距离
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        if (scrollTop == 0) {
+          //显示滚动条
+          document.body.style.overflow = 'auto';
+          clearInterval(this.timer);
+          return ;
+        }
+        
+        document.documentElement.scrollTop = scrollTop - this.value;
+      }, 5);
     }
   },
   
