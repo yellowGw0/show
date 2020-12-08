@@ -4,8 +4,9 @@ import VueRouter from 'vue-router'
 const Index = () => import('@/views/index/Index.vue');
 const Design = () => import('@/views/design/Design.vue');
 const Message = () => import('@/views/message/Message.vue');
-// const About = () => import('@/views/about/About.vue');
-// const Login = () => import('@/views/login/Login.vue');
+const About = () => import('@/views/about/About.vue');
+const Login = () => import('@/views/login/Login.vue');
+const Register = () => import('@views/register/Register.vue');
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,18 @@ const routes = [
   {
     path: '/message',
     component: Message
+  },
+  {
+    path: '/about',
+    component: About
+  },
+  {
+    path: '/login',
+    component: Login
+  },
+  {
+    path: '/register',
+    component: Register
   }
 ]
 

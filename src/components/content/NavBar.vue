@@ -8,7 +8,7 @@
       </div>
       <div class="nav-right">
         <div @click="linkClick('/about')">关于 <i class="nav-arrows"></i></div>
-        <div class="login" @click="linkClick('/login')">Login</div>
+        <div class="login-btn" @click="linkClick('/login')">Login</div>
       </div>
     </div>
   </div>
@@ -86,7 +86,7 @@ export default {
   .nav-left div:hover .nav-arrows, .nav-right div:hover .nav-arrows {
     margin-left:7px;
   }
-  .login {
+  .login-btn {
     width: 100px;
     height: 30px;
     background-color: var(--color-text);
@@ -95,7 +95,7 @@ export default {
     text-align: center;
     padding-left: 14px;
   }
-  .login:hover {
+  .login-btn:hover {
     animation: login-anime .3s;
   }
   @keyframes login-anime {
