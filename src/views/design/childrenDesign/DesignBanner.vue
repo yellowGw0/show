@@ -1,6 +1,6 @@
 <template>
   <div class="design-banner">
-    <img src="@a/img/作品展示图.png"> 
+    <img src="@a/img/作品展示图.png">
   </div>
 </template>
 

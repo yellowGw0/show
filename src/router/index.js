@@ -3,7 +3,9 @@ import VueRouter from 'vue-router'
 
 const Index = () => import('@/views/index/Index.vue');
 const Design = () => import('@/views/design/Design.vue');
-const Message = () => import('@/views/message/Message.vue')
+const Message = () => import('@/views/message/Message.vue');
+// const About = () => import('@/views/about/About.vue');
+// const Login = () => import('@/views/login/Login.vue');
 
 Vue.use(VueRouter)
 

@@ -7,8 +7,8 @@
         <div @click="linkClick('/message')">留言 <i class="nav-arrows"></i></div>
       </div>
       <div class="nav-right">
-        <div>关于 <i class="nav-arrows"></i></div>
-        <div class="login">Login</div>
+        <div @click="linkClick('/about')">关于 <i class="nav-arrows"></i></div>
+        <div class="login" @click="linkClick('/login')">Login</div>
       </div>
     </div>
   </div>
