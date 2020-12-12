@@ -8,7 +8,7 @@ const About = () => import('@/views/about/About.vue');
 const Login = () => import('@/views/login/Login.vue');
 const Register = () => import('@views/register/Register.vue');
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
